@@ -3,9 +3,9 @@
 var path = require('path'); //path is a built-in node library to handle file system paths
 var express = require('express'); //express is a popular Model-View-Controller framework for Node
 var compression = require('compression'); //compression library to gzip responses for smaller/faster transfer
+console.log('hi');
 var favicon = require('serve-favicon'); //favicon library to handle favicon requests
 var cookieParser = require('cookie-parser'); //Library to parse cookies from the requests
-
 //-------------SETUP----------------------------
 
 var port = process.env.PORT || process.env.NODE_PORT || 3000;
@@ -23,12 +23,10 @@ var constructor = require("./controllers/pageConstructor.js");
 var navigation = require("./controllers/siteNavigation.js");
 
 //Set up my paths. Some thought could go in here.
-
-
+navigation.siteNavigation(app);
 
 
 //------------LAUNCH SERVER--------------------------------
-
 var server = app.listen(port, function(err) {
 	if(err) {
 		throw err;

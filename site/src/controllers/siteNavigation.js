@@ -1,17 +1,18 @@
 var path = require('path'); 
 
-var base_path = 
+//var base_path = 
 
-function siteNavigation(app) {
+var siteNavigation = function(app) {
 
 	//
 	app.get('/', function(req, res) {
+		res.send('<h1>Hello World</h1>');
 		//res.sendFile(path.resolve(__dirname+'../../../client/mainpage.html'));
 	});
 
 
 	//----CURRENT PROJECTS---------------
 
-}
+};
 
-//module.exports.siteNavigation = siteNavigation;
+module.exports.siteNavigation = siteNavigation;

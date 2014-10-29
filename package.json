@@ -2,9 +2,10 @@
   "name": "Latinforimagination",
   "version": "0.0.0",
   "description": "0.0.0",
-  "main": "site/src/site.js",
+  "main": "./site/src/site.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jshint ./site/src",
+    "start": "node ./site/src/site.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,9 @@
   },
   "homepage": "https://github.com/danShumway/Latinforimagination",
   "dependencies": {
+    "cookie-parser": "~1.3.3",
+    "serve-favicon": "~2.1.5",
+    "compression": "~1.1.1",
     "express": "~4.10.1"
   }
 }
