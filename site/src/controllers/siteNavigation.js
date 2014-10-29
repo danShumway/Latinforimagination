@@ -1,13 +1,15 @@
 var path = require('path'); 
 
-//var base_path = 
+var templates = path.resolve(__dirname + '../templates');
+var pages = path.resolve(__dirname + '../pages');
 
 var siteNavigation = function(app) {
 
 	//
 	app.get('/', function(req, res) {
-		res.send('<h1>Hello World</h1>');
-		//res.sendFile(path.resolve(__dirname+'../../../client/mainpage.html'));
+		//res.send('<h1>Hello World</h1>');
+		res.sendFile(templates + "/header.html");
+		res.sendFile(templates + "/footer.html");
 	});
 
 
