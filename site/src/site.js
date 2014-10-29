@@ -12,11 +12,17 @@ var port = process.env.PORT || process.env.NODE_PORT || 3000;
 var app = express();
 app.use(compression()); //Not sure why this is here.
 
+
+
 var handlebars = express_handlebars.create({
 	defaultLayout: 'main', 
-	layoutsDir: path.resolve(__dirname + "/templates")
+	layoutsDir: path.resolve(__dirname + "/templates"),
+	partialsDir: path.resolve(__dirname + "/templates/partials")
 });
+
+
 app.engine('handlebars', handlebars.engine);
+app.set('views', path.resolve(__dirname + "/pages"));
 app.set('view engine', 'handlebars'); //I guess?
 
 
@@ -34,7 +40,6 @@ var navigation = require("./controllers/siteNavigation.js");
 //Set up my paths. Some thought could go in here.
 //constructor.
 //navigation.siteNavigation(app);
-app.set('views', path.resolve(__dirname + "/pages"));
 app.get('/', function(req, res) {
 	//res.send('<h1>Hello World</h1>');
 	//res.sendFile(templates + "/header.html");
