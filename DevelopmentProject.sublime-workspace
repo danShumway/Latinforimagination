@@ -1,0 +1,830 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Account",
+				"AccountModel"
+			],
+			[
+				"curr",
+				"currentIndex"
+			],
+			[
+				"_s",
+				"_strategy"
+			],
+			[
+				"str",
+				"strategy"
+			],
+			[
+				"curren",
+				"currentIndex"
+			],
+			[
+				"curre",
+				"currentStep"
+			],
+			[
+				"dupli",
+				"duplicated_next"
+			],
+			[
+				"rot",
+				"rotateDirections"
+			],
+			[
+				"toy",
+				"toybox"
+			],
+			[
+				"_set",
+				"_setBodyType"
+			],
+			[
+				"Com",
+				"ComponentSwap"
+			],
+			[
+				"sel",
+				"selectedImage"
+			],
+			[
+				"selec",
+				"selectedCategory"
+			],
+			[
+				"sele",
+				"selectedCategory"
+			],
+			[
+				"cate",
+				"categories"
+			],
+			[
+				"json",
+				"jsonData"
+			],
+			[
+				"op",
+				"optionString"
+			],
+			[
+				"current",
+				"currentInput"
+			],
+			[
+				"tra",
+				"bytesToTrack"
+			],
+			[
+				"ra",
+				"RandomInput"
+			],
+			[
+				"avera",
+				"averageNovelty"
+			],
+			[
+				"past",
+				"pastResults"
+			],
+			[
+				"by",
+				"bytesChanged"
+			],
+			[
+				"y",
+				"yDirection"
+			],
+			[
+				"tempDa",
+				"tempDataStorage_back"
+			],
+			[
+				"tim",
+				"currentTime"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/C/Users/shumw_000/Documents/Website/index.html",
+			"settings":
+			{
+				"buffer_size": 8264,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "site/src/site.js",
+			"settings":
+			{
+				"buffer_size": 2543,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": ".buildpacks",
+			"settings":
+			{
+				"buffer_size": 53,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/shumw_000/linkedIn/LoginApp-master/LoginApp-master/src/app.js",
+			"settings":
+			{
+				"buffer_size": 1327,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/Users/shumw_000/linkedIn/LoginApp-master/LoginApp-master/src/controllers/index.js",
+			"settings":
+			{
+				"buffer_size": 93,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/Users/shumw_000/linkedIn/LoginApp-master/LoginApp-master/src/controllers/Account.js",
+			"settings":
+			{
+				"buffer_size": 1014,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/Users/shumw_000/linkedIn/LoginApp-master/LoginApp-master/src/models/Account.js",
+			"settings":
+			{
+				"buffer_size": 1700,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 104.0,
+		"selected_items":
+		[
+			[
+				"package insta",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"json",
+				"Set Syntax: JSON"
+			],
+			[
+				"package install",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/shumw_000/Server Based Programming/mvc/simple no jade",
+		"/C/Users/shumw_000/linkedIn/LoginApp-master/LoginApp-master",
+		"/C/Users/shumw_000/Documents/Latinforimagination/site",
+		"/C/Users/shumw_000/Documents/Latinforimagination/site/src/templates/partials",
+		"/C/Users/shumw_000/Documents/PigletServer"
+	],
+	"file_history":
+	[
+		"/C/Users/shumw_000/Documents/PigletServer/gameboy.js",
+		"/C/Users/shumw_000/Documents/Latinforimagination/site/src/controllers/pageConstructor.js",
+		"/C/Users/shumw_000/Documents/Latinforimagination/site/src/controllers/siteNavigation.js",
+		"/C/Users/shumw_000/Documents/Latinforimagination/package.json",
+		"/C/Users/shumw_000/Documents/Latinforimagination/site/src/site.js",
+		"/C/Users/shumw_000/Documents/Latinforimagination/site/src/templates/main.handlebars",
+		"/C/Users/shumw_000/Documents/Latinforimagination/site/src/pages/home.handlebars",
+		"/C/Users/shumw_000/Documents/Latinforimagination/site/src/templates/partials/header.handlebars",
+		"/C/Users/shumw_000/Documents/Latinforimagination/site/src/templates/partials/footer.handlebars",
+		"/C/Users/shumw_000/Documents/Latinforimagination/site/src/templates/footer.html",
+		"/C/Users/shumw_000/Documents/Latinforimagination/.buildpacks",
+		"/C/Users/shumw_000/Documents/Latinforimagination/other_buildpacks",
+		"/C/Users/shumw_000/Documents/Latinforimagination/site/src/templates/header.html",
+		"/C/Users/shumw_000/Documents/Latinforimagination/npm-debug.log",
+		"/C/Users/shumw_000/Documents/Latinforimagination/src/site.js",
+		"/C/Users/shumw_000/Documents/Latinforimagination/src/controllers/pageConstructor.js",
+		"/C/Users/shumw_000/linkedIn/LoginApp-master/LoginApp-master/client/style.css",
+		"/C/Users/shumw_000/Documents/Latinforimagination/src/controllers/siteNavigation.js",
+		"/C/Users/shumw_000/Documents/Latinforimagination/src/stream.js",
+		"/C/Users/shumw_000/Documents/test.js",
+		"/C/Users/shumw_000/Server Based Programming/mvc/simple no jade/src/controllers/index.js",
+		"/C/Users/shumw_000/Server Based Programming/mvc/simple no jade/src/router.js",
+		"/C/Users/shumw_000/Server Based Programming/Syncing Data/views/index.html",
+		"/C/Users/shumw_000/Server Based Programming/Syncing Data/src/app.js",
+		"/C/Users/shumw_000/Server Based Programming/Syncing Data/package.json",
+		"/C/Users/shumw_000/linkedIn/simple_ws/simple_ws/package.json",
+		"/C/Users/shumw_000/Piglet/Code/README.md",
+		"/C/Users/shumw_000/Piglet/Code/Piglet/README.md",
+		"/C/Users/shumw_000/Piglet/Code/Piglet/final.lua",
+		"/C/Users/shumw_000/Piglet/Code/Piglet/Observers/observer.lua",
+		"/C/Users/shumw_000/Piglet/Code/Piglet/index.lua",
+		"/C/Users/shumw_000/Piglet/Code/Piglet/Processors/processor.lua",
+		"/C/Users/shumw_000/Piglet/Code/Piglet/Processors/tests/guessTestRevise.lua",
+		"/C/Users/shumw_000/Piglet/Code/Piglet/Processors/tests/changerTest.lua",
+		"/C/Users/shumw_000/Piglet/Code/Piglet/memory/Instant/instant.lua",
+		"/C/Users/shumw_000/Piglet/Code/Piglet/memory/Long/long.lua",
+		"/C/Users/shumw_000/Piglet/Code/Piglet/memory/Short/DataStructures/strategy.lua",
+		"/C/Users/shumw_000/Piglet/Code/Piglet/Hardware/eye.lua",
+		"/C/Users/shumw_000/Piglet/Code/Piglet/Hardware/hand.lua",
+		"/C/Users/shumw_000/Piglet/Code/Piglet/memory/Short/short.lua",
+		"/C/Users/shumw_000/Piglet/Code/Piglet/Deciders/decider.lua",
+		"/C/Program Files/Sublime Text 3/changelog.txt",
+		"/C/Users/shumw_000/AppData/Local/Temp/Temp1_AllSets.json.zip/AllSets.enUS.json",
+		"/C/Users/shumw_000/Natural Language Processing/repo/Project notes and submission/thoughts.txt",
+		"/C/Users/shumw_000/Game Balance/AllSets.json/AllSets.enUS.json",
+		"/C/Users/shumw_000/Dropbox/Git Repos/Piglet/params.json",
+		"/C/Users/shumw_000/Dropbox/Git Repos/Piglet/Piglet/memory/Short/short.lua",
+		"/C/Users/shumw_000/Dropbox/Git Repos/Piglet/Piglet/Processors/tests/guessTestRevise.lua",
+		"/C/Users/shumw_000/Dropbox/Git Repos/Piglet/Piglet/memory/Short/DataStructures/strategy.lua",
+		"/C/Users/shumw_000/Dropbox/Git Repos/Piglet/Piglet/Deciders/decider.lua",
+		"/C/Users/shumw_000/Documents/Shalom Street/AR/Source/www/Data/2014-2015.js",
+		"/C/Users/shumw_000/Dropbox/Git Repos/Piglet/Piglet/memory/Long/long.lua",
+		"/C/Users/shumw_000/Dropbox/Git Repos/Piglet/Piglet/Hardware/hand.lua",
+		"/C/Users/shumw_000/Documents/Shalom Street/AR/Source/platforms/android/.project",
+		"/C/Users/shumw_000/Documents/Shalom Street/AR/Source/www/config.xml",
+		"/C/Users/shumw_000/Dropbox/Git Repos/Piglet/Piglet/index.lua",
+		"/C/Users/shumw_000/Dropbox/Git Repos/Piglet/Piglet/old_indexes/outdated and misc/current.lua",
+		"/C/Users/shumw_000/Documents/Shalom Street/AR/Source/platforms/android/build.xml",
+		"/C/Users/shumw_000/Documents/Shalom Street/AR/Source/platforms/android/AndroidManifest.xml",
+		"/C/Users/shumw_000/Documents/Shalom Street/AR/Source/www/Data/2014-2015/Maccabean_Revolt.html",
+		"/C/Users/shumw_000/Dropbox/Git Repos/Piglet/Visualizers/Data/total.js",
+		"/C/Users/shumw_000/Dropbox/Git Repos/Piglet/Piglet/Databases/Mario_6Golden_Coins/test_01",
+		"/C/Users/shumw_000/Dropbox/Git Repos/Piglet/recorders/causalResults.lua",
+		"/C/Users/shumw_000/Dropbox/Git Repos/Piglet/recorders/default.lua",
+		"/C/Users/shumw_000/Dropbox/Git Repos/Piglet/Piglet/Observers/previous/tests/ChangerTest.lua",
+		"/C/Users/shumw_000/Dropbox/Git Repos/Piglet/Piglet/Observers/watcher.lua",
+		"/C/Users/shumw_000/Documents/Shalom Street/Toy/.git/config",
+		"/C/Users/shumw_000/Documents/Shalom Street/Toy/.git/sourcetreeconfig",
+		"/C/Users/shumw_000/Documents/Shalom Street/AR/.git/config",
+		"/C/Users/shumw_000/Documents/Shalom Street/AR/.git/sourcetreeconfig",
+		"/C/Users/shumw_000/Documents/Shalom Street/AR/ModexFix/.git",
+		"/C/Users/shumw_000/Documents/Shalom Street/Toy/.git/description",
+		"/C/Users/shumw_000/Documents/Shalom Street/Toy/.git/index",
+		"/C/Users/shumw_000/Documents/Shalom Street/AR/Source/www/Modex.js/.git",
+		"/C/Users/shumw_000/Dropbox/Git Repos/Piglet/Piglet/memory/Instant/instant.lua",
+		"/C/Users/shumw_000/Dropbox/Git Repos/Piglet/Piglet/Hardware/eye.lua",
+		"/C/Users/shumw_000/Dropbox/Git Repos/Piglet/Piglet/Observers/observer.lua",
+		"/C/Users/shumw_000/Dropbox/Git Repos/Piglet/Piglet/final.lua",
+		"/C/Users/shumw_000/Documents/Shalom Street/Toy/Modex.js/base/manager.js",
+		"/C/Users/shumw_000/Documents/Shalom Street/Toy/superhero/CharacterBuilder(Girl).js",
+		"/C/Users/shumw_000/Documents/Shalom Street/Toy/Modex.js/base/module.js",
+		"/C/Users/shumw_000/Documents/Shalom Street/Toy/Modex.js/graphics/domElement.js",
+		"/C/Users/shumw_000/Documents/Shalom Street/Toy/superhero/modelSelect.js",
+		"/C/Users/shumw_000/Documents/Shalom Street/Toy/superhero/characterBuilder(Boy).js",
+		"/C/Users/shumw_000/Documents/Shalom Street/Toy/superhero/bodyPart.js",
+		"/C/Users/shumw_000/Documents/Shalom Street/Toy/superhero/characterSkeleton.js",
+		"/C/Users/shumw_000/Documents/Shalom Street/Toy/superhero/scenarioScreen.js",
+		"/C/Users/shumw_000/Documents/Shalom Street/Toy/superhero/toyboxTab.js",
+		"/C/Users/shumw_000/Documents/Shalom Street/Toy/data/characterBuilder.js",
+		"/C/Users/shumw_000/Documents/Shalom Street/Toy/superhero/characterBuilder.js",
+		"/C/Users/shumw_000/Documents/Shalom Street/Toy/Modex.js/graphics/sprite.js",
+		"/C/Users/shumw_000/Documents/Shalom Street/Toy/data/characterOptions.js",
+		"/C/Users/shumw_000/Documents/Shalom Street/Toy/data/test.js",
+		"/C/Users/shumw_000/Documents/Shalom Street/Toy/Modex.js/extensions/jsonBuilder.js",
+		"/C/Users/shumw_000/Documents/Shalom Street/Toy/Modex.js/extensions/jsonLoader.js",
+		"/C/Users/shumw_000/Documents/Shalom Street/Toy/Modex.js/states/currentState.js",
+		"/C/Users/shumw_000/Documents/Shalom Street/Toy/superhero/powersScreen.js",
+		"/C/Users/shumw_000/Documents/Shalom Street/Toy/superhero/bodySelectBoy.js",
+		"/C/Users/shumw_000/Documents/Shalom Street/Toy/superhero/detailedScenarioScreen.js",
+		"/C/Users/shumw_000/Documents/The Organizer/The Organizer/Files/individuals.xml",
+		"/C/Users/shumw_000/Documents/Shalom Street/Toy/data/scenarios.json",
+		"/C/Users/shumw_000/Documents/Shalom Street/Toy/Data/test.json",
+		"/C/Users/shumw_000/Documents/Shalom Street/Toy/data.json",
+		"/C/Users/shumw_000/Documents/Shalom Street/Toy/Modex.js/extensions/extensionManager.js",
+		"/C/Users/shumw_000/Documents/Shalom Street/Toy/index.html",
+		"/C/Users/shumw_000/Documents/Shalom Street/Toy/Modex.js/extensions/touch.js",
+		"/C/Users/shumw_000/Documents/Shalom Street/Toy/testJSON.js",
+		"/C/Users/shumw_000/Documents/Shalom Street/Toy/superhero/qualitiesScreen.js",
+		"/C/Users/shumw_000/Documents/Shalom Street/Toy/superhero/splashScreen.js",
+		"/C/Users/shumw_000/Documents/Shalom Street/Toy/superhero/characterBuilder2.js",
+		"/C/Users/shumw_000/Documents/Shalom Street/Toy/superhero/playArea.js",
+		"/C/Users/shumw_000/Documents/Shalom Street/Toy/superhero/resultsScreen.js",
+		"/C/Users/shumw_000/Documents/Shalom Street/Toy/superhero/superPoseScreen.js",
+		"/C/Users/shumw_000/Documents/Shalom Street/Toy/superhero/whyItWorkedScreen.js",
+		"/C/Users/shumw_000/Documents/Shalom Street/Toy/superhero/characterBioScreen.js",
+		"/C/Users/shumw_000/Documents/Shalom Street/Toy/Modex.js/states/state.js",
+		"/C/Users/shumw_000/Dropbox/Git Repos/Piglet/memory/testingSession/jump.json",
+		"/C/Users/shumw_000/Dropbox/Git Repos/Piglet/memory/testingSession/right.json",
+		"/C/Users/shumw_000/Dropbox/Git Repos/Piglet/memory/testingSession/rightRelease.json",
+		"/C/Users/shumw_000/Dropbox/Git Repos/Piglet/memory/testingSession/rightStart.json",
+		"/C/Users/shumw_000/Dropbox/Git Repos/Piglet/memory/testingSession/var run0.json",
+		"/C/Users/shumw_000/Dropbox/Git Repos/Piglet/memory/testingSession/memory.json",
+		"/C/Users/shumw_000/Dropbox/Git Repos/Piglet/memory/testingSession/test.json",
+		"/C/Users/shumw_000/Dropbox/Git Repos/Piglet/memory/default.lua",
+		"/C/Users/shumw_000/Dropbox/Git Repos/Piglet/memory/testingSession/output.json",
+		"/C/Users/shumw_000/Dropbox/Git Repos/Piglet/memory/testingSessionoutput.json",
+		"/C/Users/shumw_000/Dropbox/Git Repos/Piglet/index.lua",
+		"/C/Users/shumw_000/Dropbox/Git Repos/Piglet/global_includes.lua"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 117.0,
+		"where_history":
+		[
+			"<open files>",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"input",
+			"start",
+			"joypadEvent",
+			"Key",
+			"[;{]",
+			"<p",
+			"p",
+			"\\+*[0-9]+/\\+*[0-9]+",
+			"+*[0-9]+/+*[0-9]+",
+			"Emerald Drake",
+			"collectible",
+			"sheep",
+			"beast",
+			",",
+			"[\\n]{2,}",
+			"slopes",
+			")",
+			"short.",
+			"Piglet.Hardware.Hand.setKeys",
+			"forgetStates",
+			"posX = ",
+			"nil",
+			"--",
+			"local",
+			".updateCause",
+			".load",
+			"save",
+			"file",
+			"print(",
+			"Modex.js",
+			"44806",
+			"states[state]",
+			"false",
+			"postulates",
+			"changed",
+			"base.addModule(",
+			"swapComponent",
+			".call(this",
+			".call[",
+			".call(",
+			".call(this",
+			"].call",
+			"var playArea",
+			"info.superhero.bodyType",
+			"\\",
+			".call[i](_clipBoard);",
+			".call[j](_clipBoard);",
+			"(_clipBoard)",
+			".call",
+			"preserve",
+			"select",
+			"addOption",
+			"toyboxtab",
+			"passed in undefined",
+			"undefined",
+			"\"sprite\":u",
+			"\"option\":undefined",
+			"swapComponent",
+			".call[i](_clipBoard);",
+			"}",
+			"Touch.Coll",
+			"Load",
+			"Touch.passAll",
+			"Touch.events",
+			"Public",
+			"lastCheck",
+			",",
+			"=",
+			"write",
+			"print",
+			"memorySave",
+			"'",
+			",",
+			"toDisplay",
+			"curState",
+			"differencesToTrack",
+			"Observe",
+			"observe",
+			"currentKe",
+			"print",
+			"vba",
+			"keys",
+			"averageNovelty",
+			"experimenting",
+			"experimenting = ",
+			"experimenting = false",
+			"FirstIndex",
+			"push",
+			"print(",
+			"shortTerm",
+			"Count",
+			"firstIndex",
+			"previousFrame",
+			"\", \"function",
+			"↵",
+			"- ",
+			"this[functionName]",
+			"scrubber",
+			"AddWatch",
+			"this.data.",
+			"path",
+			"\"",
+			"text{",
+			"text",
+			"color",
+			"state",
+			"lastFrame",
+			"getCurrentPosition",
+			"img",
+			"onError",
+			"weather",
+			" 0f",
+			"1f",
+			"e",
+			"width",
+			"puppy\"",
+			":\n",
+			"error_reporting",
+			"\"sprite\"",
+			".map",
+			"onJSONLOaded",
+			"onGetFood",
+			"drawOverlays",
+			"onJSONLOADed",
+			"results[i]",
+			"event",
+			"description",
+			"alert"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"doCollision",
+			"getEaten",
+			"checkCollision",
+			"draw",
+			"update",
+			"quad",
+			"setQuad",
+			"kill",
+			"poison",
+			"radius",
+			"removeMe",
+			"radius",
+			"y",
+			"x",
+			"alive"
+		],
+		"reverse": false,
+		"show_context": false,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/C/Users/shumw_000/Documents/Website/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8264,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								172,
+								172
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "site/src/site.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2543,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								805,
+								805
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": ".buildpacks",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 53,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								53,
+								53
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 3,
+					"file": "/C/Users/shumw_000/linkedIn/LoginApp-master/LoginApp-master/src/app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1327,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								258,
+								295
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/C/Users/shumw_000/linkedIn/LoginApp-master/LoginApp-master/src/controllers/index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 93,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/C/Users/shumw_000/linkedIn/LoginApp-master/LoginApp-master/src/controllers/Account.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1014,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								257,
+								257
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/C/Users/shumw_000/linkedIn/LoginApp-master/LoginApp-master/src/models/Account.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1700,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								575,
+								575
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 30.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.971114962449,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "DevelopmentProject.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 189.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

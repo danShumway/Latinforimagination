@@ -1,20 +1,34 @@
 var path = require('path'); 
 
-var templates = path.resolve(__dirname + '/../templates');
-var pages = path.resolve(__dirname + '/../pages');
 
-var siteNavigation = function(app) {
+var site = function(app) {
 
-	//
+	//---------HOME-----------------------
 	app.get('/', function(req, res) {
-		//res.send('<h1>Hello World</h1>');
-		res.sendFile(templates + "/header.html");
-		res.sendFile(templates + "/footer.html");
+		res.render('home', {
+			title:"Latinforimagination",
+			helpers: {
+				func: function() { return "I can do whatever here" }
+			}
+		});
 	});
 
+	app.get('/about', function(req, res) {
+		res.render('about');
+	});
 
 	//----CURRENT PROJECTS---------------
 
+
+
+	//------APPS-------------------------
+	/*app.get('/SwapCounter', mid.requiresLogin, function(req, res) {
+		//We have to render a response.
+		//We have to start up the app.
+		//When navigating away, we have to stop the app.
+		//Etc...
+	});*/
+
 };
 
-module.exports.siteNavigation = siteNavigation;
+module.exports.site = site;

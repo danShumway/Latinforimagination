@@ -12,7 +12,12 @@ var port = process.env.PORT || process.env.NODE_PORT || 3000;
 var app = express();
 app.use(compression()); //Not sure why this is here.
 
+//-----------SET UP HEADERS AND ASSETS------------------------------------------------
+app.use('/assets', express.static(path.resolve(__dirname+'/assets'))); //Set up static assets.
+app.use(favicon(__dirname + '/assets/favicons/16x16.ico'));
+//app.use(cookieParser()); //Not sure why this is here.
 
+//-----------SET UP HANDLEBARS AND RENDERING-------------------------------------------
 
 var handlebars = express_handlebars.create({
 	defaultLayout: 'main', 
@@ -26,30 +31,64 @@ app.set('views', path.resolve(__dirname + "/pages"));
 app.set('view engine', 'handlebars'); //I guess?
 
 
-
-
 //app.set('views', __dirname + '../../client/template');
 //app.use('/assets', express.static(path.resolve(__dirname+'../../client/'))); //Set up static assets.
 //app.use(favicon(__dirname + '../../client/img/favicon.png'));
 //app.use(cookieParser()); //Not sure why this is here.
 
-//router(app);
-var constructor = require("./controllers/pageConstructor.js");
-var navigation = require("./controllers/siteNavigation.js");
+//default redis port: 6379
+/*
+var redisPass;
+if(process.env.REDISCLOUD_URL) {
+	redisURL = url.parse(process.env.REDISCLOUD_URL);
+	redisPASS = redisURL.auth.split(":")[1];
+}
 
-//Set up my paths. Some thought could go in here.
-//constructor.
-//navigation.siteNavigation(app);
-app.get('/', function(req, res) {
-	//res.send('<h1>Hello World</h1>');
-	//res.sendFile(templates + "/header.html");
-	res.render('home')
-	//res.sendFile(templates + "/footer.html");
-});
+app.use(session({
+	store: new RedisStore({
+		host: redisURL.hostname,
+		port: redisURL.port,
+		pass: redisPASS
+	}),
+}))
 
+var requiresLogin = function(req, res, next) {
+	//Code for login.
 
-console.log('starting server');
+		//If not authenticated.
+		return res.redirect('/');
+	
+	//else
+	next();
+}
+
+//heroku addons:add redis-cloud
+
+var requireSecure = function(req, res, next) {
+
+	//If you're on your own server, just call 'req.secure'
+	if(req.headers['x-forwarded-proto'] != 'https') {
+		return res.redirect('https://' + req.host + req.url);
+	}
+
+	next();
+}
+
+var bypassSecure = function(req, res, next) {
+	next();
+}
+
+if(process.env.NODE_ENV === "production") {
+	module.exports.requireSecure = requireSecure;
+} else {
+	module.exports.requireSecure = bypassSecure;
+}
+some stuff*/
+
 //------------LAUNCH SERVER--------------------------------
+var navigation = require("./controllers/siteNavigation.js");
+navigation.site(app);
+//
 var server = app.listen(port, function(err) {
 	if(err) {
 		throw err;
@@ -57,6 +96,13 @@ var server = app.listen(port, function(err) {
 		console.log('Listening on port: ' + port);
 	}
 });
+
+//ToDo:
+//	Set up sessions.
+//	Figure out how to get an online app or game running in that session.
+//	Build and port over site.
+
+
 
 //----------------ROUTER------------------------------------
 
