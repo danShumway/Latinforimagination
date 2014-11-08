@@ -71,12 +71,12 @@ for(var i = 0; i < 10; i++){
 	sprites.push(new Cloud(Math.floor(Math.random()*500), Math.floor(Math.random()*100), Math.random()*.3+.2, 5));
 }
 
-var Ground = function(color){
+var Ground = function(color, max_elevation){
 
 
 	this.area = [];
 	var currentElevation = 100;//Math.floor(Math.random()*50)+50;
-	var targetElevation = Math.floor(Math.random()*100);
+	var targetElevation = Math.floor(Math.random()*max_elevation);
 	for (var i = 0; i < 500; i++){
 		var choice = Math.random();
 		if(choice < .5){
@@ -92,7 +92,7 @@ var Ground = function(color){
 				currentElevation-=2;
 			}
 		} else if(choice > .97) {
-			targetElevation = Math.floor(Math.random()*100);
+			targetElevation = Math.floor(Math.random()*max_elevation);
 		}
 		this.area.push(currentElevation);
 	}
@@ -103,10 +103,12 @@ var Ground = function(color){
 		}
 	};
 
-	this.update = function(){}
+	this.update = function(){
+
+	}
 };
 
-var ground = new Ground('rgb(100, 200, 150');
+var ground = new Ground('rgb(100, 200, 150', 100);
 
 var Sky = function(r, g, b) {
 
@@ -148,8 +150,12 @@ var draw = function() {
 
 	ground.draw();
 
+
 	for(sprite in sprites){
 		sprites[sprite].castShadow(ground, -8);
+	}
+	
+	for(sprite in sprites){
 		sprites[sprite].draw();
 		sprites[sprite].update();
 	}

@@ -1,1 +1,48 @@
-.header .
+.header .center{
+	margin-left:auto;
+	margin-right:auto;
+	overflow:hidden;
+}
+
+.header .spacer{
+	height:50%;
+}
+
+#banner {
+	height:100%;
+	width:60%;
+}
+
+/*-----------------------------------------*/
+
+#navigation {
+	text-align:center;
+	height:40%;
+}
+
+
+
+
+
+
+
+/*-------------------------------------------*/
+
+.header a {
+	/*--Positioning*/
+	display:inline-block;
+	font-size:140%;
+	height:100%;
+	padding:1%;
+	padding-top:2%;
+
+	/*--Formatting*/
+	text-decoration: none;
+	color:rgb(10,10,10);
+	background:linear-gradient(rgba(140,140,190,0),rgba(140,140,190,1));
+	font-family: 'Hammersmith One', sans-serif;
+	border-radius:5px;
+
+}
+
+
