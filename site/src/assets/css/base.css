@@ -41,6 +41,9 @@ html,body {
 	/*--Position*/
 	position:absolute;
 	height:100%;
+	width:100%;
+	box-shadow: inset 0px 40px 24px -37px rgba(0,0,0,0.4), 
+			inset 0px -40px 24px -37px rgba(0,0,0,0.4);
 
 }
 

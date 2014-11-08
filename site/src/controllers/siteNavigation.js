@@ -5,10 +5,26 @@ var site = function(app) {
 
 	//---------HOME-----------------------
 	app.get('/', function(req, res) {
+
+		//Grab a random quote.
+		var quotes = new Array();	
+		quotes.push("Quidquid latine dictum, altum videtur");
+		quotes.push("What, were you expecting something witty?");
+		quotes.push("We make art look good.");
+		quotes.push("Want to be friends?");
+		quotes.push("Everything is going to be OK.");
+		quotes.push("Odds are, I'm working on a game right now.");
+		quotes.push("Everything will end in sunshine and rainbows.");
+		quotes.push("Want to see something cool?");
+
+		//Render page.
 		res.render('home', {
 			title:"Latinforimagination",
+			pageCSS:"assets/css/pages/home.css",
+			backgroundScript: "assets/scripts/backgrounds/home.js",
+			quote: quotes[Math.floor(Math.random()*quotes.length)],
 			helpers: {
-				func: function() { return "I can do whatever here" }
+				backgroundScript: function() { return "assets/scripts/backgrounds/home.js" },
 			}
 		});
 	});

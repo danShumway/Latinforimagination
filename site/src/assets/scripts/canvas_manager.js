@@ -9,9 +9,9 @@
 	window._g = function(number){
 		var e = canvas_environment;
 		if(e.use_dimension === "x") {
-			return number*(e.display_resolution.x/e.internal_resolution.x);
+			return Math.floor(number*(e.display_resolution.x/e.internal_resolution.x));
 		} else if (e.use_dimension === "y") {
-			return number*(e.display_resolution.y/e.internal_resolution.y);
+			return Math.floor(number*(e.display_resolution.y/e.internal_resolution.y));
 		} else {
 			throw "Improper dimension specified for conversion: canvas_manager: _g";
 		}
@@ -20,15 +20,15 @@
 	window._l = function(number){
 		var e = canvas_environment;
 		if(e.use_dimension === "x") {
-			return number*(e.internal_resolution.x/e.display_resolution.x);
+			return Math.floor(number*(e.internal_resolution.x/e.display_resolution.x));
 		} else if (e.use_dimension === "y") {
-			return number*(e.internal_resolution.y/e.display_resolution.y);
+			return Math.floor(number*(e.internal_resolution.y/e.display_resolution.y));
 		} else {
 			throw "Improper dimension specified for conversion: canvas_manager: _l";
 		}
 	}
 
-	window._animate = function(framerate, callback) {
+	window._animate = function(callback, framerate) {
 		var handler = {
 			"running":true,
 			"currentFrame":0,
