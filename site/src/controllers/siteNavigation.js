@@ -5,7 +5,8 @@ var Account = require('../models/user');
 var site = function(app, passport) {
 
 	//---------HOME-----------------------
-	app.get('/', function(req, res) {
+	app.get('/', function(req, res) { res.redirect('/home'); });
+	app.get('/home', function(req, res) {
 
 		//Grab a random quote.
 		var quotes = new Array();	
@@ -23,6 +24,8 @@ var site = function(app, passport) {
 			title:"Latinforimagination",
 			pageCSS:"assets/css/pages/home.css",
 			backgroundScript: "assets/scripts/backgrounds/home.js",
+			loggedIn: loggedIn(req, res),
+			username: (req.user)? req.user.local.username : undefined,
 			quote: quotes[Math.floor(Math.random()*quotes.length)],
 			helpers: {
 				backgroundScript: function() { return "assets/scripts/backgrounds/home.js" },
@@ -62,14 +65,56 @@ var site = function(app, passport) {
 		passport.authenticate('local-login', function(err, user, info) {
 			if(err) { console.log('there was an error'); }
 			if(!user) { console.log('you were not authenticated'); }
-			if(user) { console.log('you were authenticated'); }
-			
-			req.login(user, function(err) {
-				if(err){ return next(err); };
-				res.redirect('/');
-			});
+
+			if(user) { 		
+				req.login(user, function(err) {
+					if(err){ res.send("error"); return; };
+					res.send("success"); return;
+				});
+			} else {
+				res.send("error"); return;
+			}
 		})(req, res);
 	});
+
+	app.get('/logout', function(req, res) {
+		req.logout();
+		res.redirect('/');
+	});
+
+	app.post('/signup', function(req, res) {
+		passport.authenticate('local-signup', function(err, user, info) {
+			/*if(err) { console.log('there was an error'); }
+			if(!user) { 
+				console.log('you were not signed up!'); 
+			}*/
+			if(user) { 
+				req.logout();
+				req.login(user, function(err) {
+					if(err){ res.send("error"); return; };
+					res.send("success"); return;
+				})
+				return;
+			} else {
+				if(req.flash('signupMessage') == "username_error") {
+					res.send("username_error");
+				} else {
+					res.send("error");
+				}
+			}
+		})(req, res);
+	});
+
+	app.get('/signup', function(req, res) {
+		console.log('get request recieved')
+		res.render('signup', {
+			title:"Latinforimagination",
+			pageCSS:"assets/css/pages/signup.css",
+			backgroundScript: "assets/scripts/backgrounds/home.js",
+			loggedIn: loggedIn(req, res),
+			username: (req.user)? req.user.local.username : undefined,
+		})
+	})
 
 	app.get('/test', function(req, res) {
 		if(req.isAuthenticated()){
@@ -78,24 +123,6 @@ var site = function(app, passport) {
 
 		res.redirect('/');
 	});
-
-	app.post('/signup', function(req, res) {
-		passport.authenticate('local-signup', function(err, user, info) {
-			if(err) { console.log('there was an error'); }
-			if(!user) { console.log('you were not signed up!'); }
-			if(user) { console.log('you were signed up'); }
-
-			res.redirect('/');
-		})(req, res);
-	});
-
-	app.get('/signup', function(req, res) {
-		res.render('signup', {
-			title:"Latinforimagination",
-			pageCSS:"assets/css/pages/signup.css",
-			backgroundScript: "assets/scripts/backgrounds/home.js",
-		})
-	})
 
 	//----------------HELPERS----------------------------
 

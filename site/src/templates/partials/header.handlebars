@@ -10,14 +10,43 @@
 		</div>
 
 		<!--This should only appear if the user is logged in.-->
-		<div class="login">
-			<form name="login" method="post" action="/login" id="login">
+		{{#if loggedIn }}
+		<div class="side_container">
+		Hello, {{username}}! <br>
+		<a href="/logout">logout</a>
+		</div>
+		{{else}}
+		<div class="side_container">
+			<form name="login" method="post" action="/login" id="login" required>
 				<input name="username" placeholder="Username" size="10"><br>
-				<input type="password" name="password" placeholder="Password" size="10">
+				<input type="password" name="password" placeholder="Password" size="10" required>
 				<input type="submit" value="Login"><br>
-				<div>New?  <a href="/signup">Signup!</a></div>
+				<span>New?  <a href="/signup">Signup!</a></span>
 			</form>
 		</div>
+
+		<script>
+			var form = document.forms["login"];
+
+			$("#login").submit(function (e) {
+				e.preventDefault();
+
+				console.log('sending login');
+				var data = {
+					username:form.elements["username"].value,
+					password:form.elements["password"].value
+				};
+
+				$.post("/login", data).done(function (response) {
+					if(response !== 'success') {
+						alert("Incorrect username or password");
+					} else {
+						window.location.reload();
+					}
+				});
+			});
+		</script>
+		{{/if}}
 
 	</div>
 </div>

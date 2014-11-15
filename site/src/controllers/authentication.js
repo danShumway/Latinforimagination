@@ -37,20 +37,24 @@ module.exports = function(passport) {
     		//Is there arlready a user?
     		if(user) {
     			console.log('user ' + username + 'already exists')
-    			return done(null, false/*req.flash('signupMessage', 'That email is already taken.'));*/);
+    			return done(null, false, req.flash('signupMessage', 'username_error'));
     		} else {
     			//no user with that email, so create it.
     			var newUser = new User();
     			newUser.local.username = username;
     			newUser.local.password = newUser.generateHash(password);
 
+    			if(req.body && req.body.email) {
+    				newUser.local.email = req.body.email;
+    			}
+
     			//Save
     			newUser.save(function(err) {
     				if(err){ throw err; }
-    				return done(null, newUser);
+    				return done(null, newUser, req.flash('signupMessage', 'Success'));
     			});
 
-    			console.log(username + ", " + password + " was signed up.");
+    			console.log(username + ", " + password + ", " + newUser.local.email + " was signed up.");
     		}
     	});
     }));

@@ -10,6 +10,7 @@ var express_handlebars = require('express-handlebars'); //What we're using to co
 var passport = require('passport');
 var session = require('express-session');
 var bodyParser = require('body-parser');
+var flash = require('connect-flash');
 
 //--------------MONGOOSE------------------------
 //Used for database and login.
@@ -34,6 +35,7 @@ app.use('/assets', express.static(path.resolve(__dirname+'/assets'))); //Set up 
 app.use(favicon(__dirname + '/assets/favicons/16x16.ico'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(flash());
 //app.use(cookieParser()); //Not sure why this is here.
 
 //-----------SET UP HANDLEBARS AND RENDERING-------------------------------------------
