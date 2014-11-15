@@ -24,30 +24,33 @@ module.exports = function(passport) {
     passport.use('local-signup', new LocalStrategy({
     	//By default, local strategy uses username and password.
     	//I'm using email for username.
-    	usernameField: 'email',
+    	usernameField: 'username',
     	passwordField: 'password',
     	passReqToCallback: true //pass the entire request to the callback.
     },
-    function(req, email, password, done) {
+    function(req, username, password, done) {
     	//Find a user who's email is the same as the passed in email.
     	//See if they already exist.
-    	User.findOne({ 'local.email' : email }, function(err, user) {
-    		if(err) { return done(err); }
+    	User.findOne({ 'local.username' : username }, function(err, user) {
+    		if(err) { console.log('there was an error signing up '+ username); return done(err); }
 
     		//Is there arlready a user?
     		if(user) {
+    			console.log('user ' + username + 'already exists')
     			return done(null, false/*req.flash('signupMessage', 'That email is already taken.'));*/);
     		} else {
     			//no user with that email, so create it.
     			var newUser = new User();
-    			newUser.local.email = email;
-    			newUser.local.passwrod = newUser.generateHash(password);
+    			newUser.local.username = username;
+    			newUser.local.password = newUser.generateHash(password);
 
     			//Save
     			newUser.save(function(err) {
     				if(err){ throw err; }
     				return done(null, newUser);
     			});
+
+    			console.log(username + ", " + password + " was signed up.");
     		}
     	});
     }));
@@ -55,21 +58,23 @@ module.exports = function(passport) {
 	//Local login.
 	passport.use('local-login', new LocalStrategy({
 		//we overwrite username and password with our own stuff.
-		usernameField : 'email',
+		usernameField : 'username',
 		passwordField : 'password',
 		passReqToCallback: true
 	},
-	function(req, email, password, done) {
+	function(req, username, password, done) {
 
 		//Check to see if a user whose email and password are the same exist.
-		User.findOne({ 'local.email' : email }, function(err, user) {
+		User.findOne({ 'local.username' : username }, function(err, user) {
 			if(err) { return done(err); }
 
 			if(!user || !user.validPassword(password)) {
+				console.log('username or passwrod is wrong.')
 				return done(null, false/*, req.flash stuff*/);
 			};
 
 			//all is done, return succsessful user.
+			console.log('successful login');
 			return done(null, user);
 		});
 	}));

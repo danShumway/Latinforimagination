@@ -1,3 +1,7 @@
+*{
+	position:relative;
+}
+
 html,body {
 	margin:0px;
 	padding:0px;
@@ -6,7 +10,7 @@ html,body {
 	overflow:hidden;
 }
 
-.header .body .footer{
+.header, .body, .footer{
 	position:relative;
 }
 

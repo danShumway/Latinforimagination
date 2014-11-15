@@ -46,26 +46,37 @@ var site = function(app, passport) {
 		//Etc...
 	});*/
 
-	app.get('/test', function(req, res) {
+	app.post('/login', function(req, res) {
 		passport.authenticate('local-login', function(err, user, info) {
 			if(err) { console.log('there was an error'); }
 			if(!user) { console.log('you were not authenticated'); }
 			if(user) { console.log('you were authenticated'); }
-
-			res.redirect('/');
+			
+			req.login(user, function(err) {
+				if(err){ return next(err); };
+				res.redirect('/');
+			});
 		})(req, res);
 	});
 
 	//------LOGIN/LOGOUT-------------------
-	app.post('/login', passport.authenticate('local-login', {
-		successRedirect: '/',
-		failureRedirect: '/login'
-	}));
+	app.get('/test', function(req, res) {
+		if(req.isAuthenticated()){
+			console.log(req.user.local.username + ' successfully accessed page');
+		} else { console.log('not logged in'); }
 
-	app.post('/signup', passport.authenticate('local-signup', {
-		successRedirect : '/profile',
-		failureRedirect: '/signup',
-	}));
+		res.redirect('/');
+	});
+
+	app.post('/signup', function(req, res) {
+		passport.authenticate('local-signup', function(err, user, info) {
+			if(err) { console.log('there was an error'); }
+			if(!user) { console.log('you were not signed up!'); }
+			if(user) { console.log('you were signed up'); }
+
+			res.redirect('/');
+		})(req, res);
+	});
 
 
 

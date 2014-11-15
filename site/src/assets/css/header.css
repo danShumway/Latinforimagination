@@ -1,23 +1,45 @@
 .header .center{
 	margin-left:auto;
 	margin-right:auto;
-	overflow:hidden;
-}
-
-.header .spacer{
-	height:50%;
 }
 
 #banner {
 	height:100%;
-	width:60%;
+	width:100%;
 }
 
 /*-----------------------------------------*/
 
 #navigation {
 	text-align:center;
-	height:40%;
+	height:100%;
+	position:absolute;
+	width:100%;
+	height:50%;
+	bottom:0px;
+}
+
+.header .links {
+	display:inline-block;
+	height:100%;
+}
+
+.header .login {
+	display:inline-block;
+	vertical-align:top;
+}
+
+#login {
+	vertical-align:bottom;
+	height:100%;
+	width:110%;
+	margin-left:1%;
+	
+}
+
+#login input {
+	float:left;
+	margin:1%;
 }
 
 
@@ -33,8 +55,9 @@
 	display:inline-block;
 	font-size:140%;
 	height:100%;
-	padding:1%;
-	padding-top:2%;
+	margin-left:5px;
+	margin-right:5px;
+	z-index:0;
 
 	/*--Formatting*/
 	text-decoration: none;
@@ -42,7 +65,6 @@
 	background:linear-gradient(rgba(140,140,190,0),rgba(140,140,190,1));
 	font-family: 'Hammersmith One', sans-serif;
 	border-radius:5px;
-
 }
 
 
