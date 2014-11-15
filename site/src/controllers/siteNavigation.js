@@ -1,7 +1,8 @@
 var path = require('path'); 
+var Account = require('../models/user');
 
 
-var site = function(app) {
+var site = function(app, passport) {
 
 	//---------HOME-----------------------
 	app.get('/', function(req, res) {
@@ -43,6 +44,38 @@ var site = function(app) {
 		//We have to start up the app.
 		//When navigating away, we have to stop the app.
 		//Etc...
+	});*/
+
+	app.get('/test', function(req, res) {
+		passport.authenticate('local-login', function(err, user, info) {
+			if(err) { console.log('there was an error'); }
+			if(!user) { console.log('you were not authenticated'); }
+			if(user) { console.log('you were authenticated'); }
+
+			res.redirect('/');
+		})(req, res);
+	});
+
+	//------LOGIN/LOGOUT-------------------
+	app.post('/login', passport.authenticate('local-login', {
+		successRedirect: '/',
+		failureRedirect: '/login'
+	}));
+
+	app.post('/signup', passport.authenticate('local-signup', {
+		successRedirect : '/profile',
+		failureRedirect: '/signup',
+	}));
+
+
+
+
+	/*app.post('/signup', function(req, res) {
+		Account.register(new Account({username:req.body.username}), req.body.password, function(err, account){
+			if(err) {
+				return res.render('signup', { account : account });
+			}
+		});
 	});*/
 
 };

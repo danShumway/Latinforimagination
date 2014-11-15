@@ -16,6 +16,18 @@
 		{
 			"follow_symlinks": true,
 			"path": "C:\\Users\\shumw_000\\Documents\\PigletServer"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "C:\\Users\\shumw_000\\linkedIn\\GameBoy-Online-master\\GameBoy-Online-master"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "C:\\Users\\shumw_000\\gameboy emulator"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "C:\\Users\\shumw_000\\easy-node-authentication-local\\easy-node-authentication-local"
 		}
 	]
 }

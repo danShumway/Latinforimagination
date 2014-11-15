@@ -1,3 +1,5 @@
+'use strict';
+
 //---------------INCLUDE-----------------------
 var path = require('path'); //path is a built-in node library to handle file system paths
 var express = require('express'); //express is a popular Model-View-Controller framework for Node
@@ -5,6 +7,20 @@ var compression = require('compression'); //compression library to gzip response
 var favicon = require('serve-favicon'); //favicon library to handle favicon requests
 var cookieParser = require('cookie-parser'); //Library to parse cookies from the requests
 var express_handlebars = require('express-handlebars'); //What we're using to compile the pages.
+var passport = require('passport');
+var session = require('express-session');
+
+//--------------MONGOOSE------------------------
+//Used for database and login.
+var mongoose = require('mongoose');
+var dbURL = process.env.MONGOHQ_URL || "mongodb://localhost/Local_Login";
+
+var db = mongoose.connect(dbURL, function(err) {
+    if(err) {
+        console.log("Could not connect to database");
+        throw err;
+    }
+});
 //-------------SETUP----------------------------
 
 var port = process.env.PORT || process.env.NODE_PORT || 3000;
@@ -85,9 +101,34 @@ if(process.env.NODE_ENV === "production") {
 }
 some stuff*/
 
+//------------CONFIGURE LOGIN AND SESSION-------------------------
+
+require("./controllers/authentication.js")(passport); //Setup passport.
+app.use(session({secret: 'mynameisdanielshumwayandthisismywebsite ', saveUninitialized: true, resave: true}));
+app.use(passport.initialize());
+app.use(passport.session()); //persistant login sessions.
+
+
+//app.use(flash()); If we want to send messages.  We don't.
+
+/*mongoose.connect(dbConfig.url);
+var passport = require('passport');
+var expressSession = require('express-session');
+app.use(expressSession({secret: 'mySecretKeyGoesHere'}));
+
+passport.serializeUser(function(user, done){
+	done(null, user._id);
+})
+
+passport.deserializeUser(function(id, done) {
+	User.findById(id, function(err, user) {
+		done(err, user);
+	})
+})*/
+
 //------------LAUNCH SERVER--------------------------------
 var navigation = require("./controllers/siteNavigation.js");
-navigation.site(app);
+navigation.site(app, passport);
 //
 var server = app.listen(port, function(err) {
 	if(err) {
