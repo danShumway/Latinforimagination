@@ -111,24 +111,6 @@ app.use(session({secret: 'mynameisdanielshumwayandthisismywebsite ', saveUniniti
 app.use(passport.initialize());
 app.use(passport.session()); //persistant login sessions.
 
-
-//app.use(flash()); If we want to send messages.  We don't.
-
-/*mongoose.connect(dbConfig.url);
-var passport = require('passport');
-var expressSession = require('express-session');
-app.use(expressSession({secret: 'mySecretKeyGoesHere'}));
-
-passport.serializeUser(function(user, done){
-	done(null, user._id);
-})
-
-passport.deserializeUser(function(id, done) {
-	User.findById(id, function(err, user) {
-		done(err, user);
-	})
-})*/
-
 //------------LAUNCH SERVER--------------------------------
 var navigation = require("./controllers/siteNavigation.js");
 navigation.site(app, passport);
@@ -141,8 +123,8 @@ var server = app.listen(port, function(err) {
 	}
 });
 
+
 //ToDo:
-//	Set up sessions.
 //	Figure out how to get an online app or game running in that session.
 //	Build and port over site.
 

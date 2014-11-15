@@ -45,12 +45,10 @@
 
 
 
-
-
-
 /*-------------------------------------------*/
 
-.header a {
+
+.header .links .link {
 	/*--Positioning*/
 	display:inline-block;
 	font-size:140%;
@@ -60,11 +58,21 @@
 	z-index:0;
 
 	/*--Formatting*/
-	text-decoration: none;
-	color:rgb(10,10,10);
 	background:linear-gradient(rgba(140,140,190,0),rgba(140,140,190,1));
 	font-family: 'Hammersmith One', sans-serif;
 	border-radius:5px;
+}
+
+.header .links .link a {
+	text-decoration: none;
+	color:rgb(10,10,10);
+	text-shadow:0px -1px rgb(60,60,200);
+}
+
+.header input {
+	border-radius:5px;
+	background-color:rgb(220, 220, 250);
+	font-family: 'Hammersmith One', sans-serif;
 }
 
 

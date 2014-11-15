@@ -3,18 +3,19 @@
 	<div id="navigation">
 
 		<div class="links">
-			<a href="/" class="menuItem">Home</a>
-			<a href="/piglet/" class="menuItem">Piglet</a>
-			<a href="/halloweentouch" class="menuItem">Halloween Touch</a>
-			<a href="/swapcounter" class="menuItem">Swap Counter</a>
-			<a href="/login" class="menuItem">Login</a>
+			<div class="link"><a href="/" class="menuItem">Home</a></div>
+			<div class="link"><a href="/piglet/" class="menuItem">Piglet</a></div>
+			<div class="link"><a href="/halloweentouch" class="menuItem">Halloween Touch</a></div>
+			<div class="link"><a href="/swapcounter" class="menuItem">Swap Counter</a></div>
 		</div>
 
+		<!--This should only appear if the user is logged in.-->
 		<div class="login">
 			<form name="login" method="post" action="/login" id="login">
 				<input name="username" placeholder="Username" size="10"><br>
 				<input type="password" name="password" placeholder="Password" size="10">
-				<input type="submit" value="Login">
+				<input type="submit" value="Login"><br>
+				<div>New?  <a href="/signup">Signup!</a></div>
 			</form>
 		</div>
 

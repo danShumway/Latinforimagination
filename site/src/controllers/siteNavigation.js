@@ -30,11 +30,21 @@ var site = function(app, passport) {
 		});
 	});
 
-	app.get('/about', function(req, res) {
-		res.render('about');
-	});
-
 	//----CURRENT PROJECTS---------------
+
+	//---------------------halloween-touch----------------
+		app.get('/halloween_touch', function(req, res) {
+			res.redirect('/halloween_touch/home');
+		});
+
+		app.get('halloween_touch/home', function(req, res){
+			res.render('home', {
+				title:"Latinforimagination",
+				pageCSS:"assets/css/pages/home.css",
+				backgroundScript: "assets/scripts/backgrounds/home.js",
+				quote: quotes[Math.floor(Math.random()*quotes.length)],
+			});
+		});
 
 
 
@@ -45,6 +55,8 @@ var site = function(app, passport) {
 		//When navigating away, we have to stop the app.
 		//Etc...
 	});*/
+
+	//--------SIGNUP AND LOGIN-----------
 
 	app.post('/login', function(req, res) {
 		passport.authenticate('local-login', function(err, user, info) {
@@ -59,7 +71,6 @@ var site = function(app, passport) {
 		})(req, res);
 	});
 
-	//------LOGIN/LOGOUT-------------------
 	app.get('/test', function(req, res) {
 		if(req.isAuthenticated()){
 			console.log(req.user.local.username + ' successfully accessed page');
@@ -78,7 +89,29 @@ var site = function(app, passport) {
 		})(req, res);
 	});
 
+	app.get('/signup', function(req, res) {
+		res.render('signup', {
+			title:"Latinforimagination",
+			pageCSS:"assets/css/pages/signup.css",
+			backgroundScript: "assets/scripts/backgrounds/home.js",
+		})
+	})
 
+	//----------------HELPERS----------------------------
+
+	//To be used internally to signal whether or not the user is logged in to the page.
+	function loggedIn(req, res) {
+		if(req.isAuthenticated()){
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	//Middleware to require login.
+	function requireLogin(req, res, next) {
+
+	}
 
 
 	/*app.post('/signup', function(req, res) {
