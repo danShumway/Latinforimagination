@@ -35,6 +35,17 @@ var site = function(app, passport) {
 
 	//----CURRENT PROJECTS---------------
 
+	//---------------------piglet------------------------
+	app.get('/piglet', function(req, res) {
+		res.render('piglet', {
+			title:"Piglet",
+			pageCSS:"assets/css/pages/piglet.css",
+			backgroundScript: "assets/scripts/backgrounds/home.js",
+			loggedIn: loggedIn(req, res),
+			username: (req.user)? req.user.local.username : undefined,
+		});
+	});
+
 	//---------------------halloween-touch----------------
 		app.get('/halloween_touch', function(req, res) {
 			res.redirect('/halloween_touch/home');
@@ -48,6 +59,8 @@ var site = function(app, passport) {
 				quote: quotes[Math.floor(Math.random()*quotes.length)],
 			});
 		});
+
+
 
 
 

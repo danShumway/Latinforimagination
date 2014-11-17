@@ -6,7 +6,7 @@
 			<input required name="username" placeholder="Username" size="25"><br>
 			<input required name="email" placeholder="Email" size="25"><br>
 			<input required type="password" name="password" placeholder="Password" size="25"><br>
-			<input required type="passwrod" name="password_confirm" placeholder="Confirm Password" size="25"><br>
+			<input required type="password" name="password_confirm" placeholder="Confirm Password" size="25"><br>
 			<input required type="submit" value="Signup"><br>
 		</form>
 	</div>
@@ -24,14 +24,17 @@
 				password:form.elements["password"].value,
 				email:form.elements["email"].value
 			};
-
-			$.post("/signup", data).done(function (response) {
-				if(response !== 'success') {
-					alert(response);
-				} else {
-					window.location.replace("/")
-				}
-			});
+			if(form.elements["password"] === form.elements["password_confirm"]) {
+				$.post("/signup", data).done(function (response) {
+					if(response !== 'success') {
+						alert("Username is already taken");
+					} else {
+						window.location.replace("/")
+					}
+				});
+			} else {
+				alert("Passwords must match");
+			}
 		});
 	</script>
 </div>
