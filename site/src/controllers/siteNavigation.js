@@ -48,17 +48,23 @@ var site = function(app, passport) {
 
 	//---------------------halloween-touch----------------
 		app.get('/halloween_touch', function(req, res) {
-			res.redirect('/halloween_touch/home');
+			/*res.redirect('/halloween_touch/home');*/
+			res.render('halloween_touch', {
+				title:"Latinforimagination",
+				pageCSS:"assets/css/pages/piglet.css",
+				backgroundScript: "assets/scripts/backgrounds/home.js",
+				quote: quotes[Math.floor(Math.random()*quotes.length)],
+			});
 		});
 
-		app.get('halloween_touch/home', function(req, res){
+		/*app.get('halloween_touch/home', function(req, res){
 			res.render('home', {
 				title:"Latinforimagination",
 				pageCSS:"assets/css/pages/home.css",
 				backgroundScript: "assets/scripts/backgrounds/home.js",
 				quote: quotes[Math.floor(Math.random()*quotes.length)],
 			});
-		});
+		});*/
 
 
 
