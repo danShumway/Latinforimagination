@@ -1,7 +1,7 @@
-'use-strict'
+(function(){ 'use strict'; })();
 
 var mongoose = require('mongoose');
-var bcrypt = require('bcrypt-nodejs')
+var bcrypt = require('bcrypt-nodejs');
 
 //What fields will exist for our user.
 var userSchema = mongoose.Schema({

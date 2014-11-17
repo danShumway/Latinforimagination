@@ -4,7 +4,7 @@
 		"internal_resolution" : {"x":1000, "y":200},
 		"display_resolution": {"x":5000, "y":1000},
 		"use_dimension": "x"
-	}
+	};
 	//Translates numbers from local to global resolution for canvas.
 	window._g = function(number){
 		var e = canvas_environment;
@@ -15,7 +15,7 @@
 		} else {
 			throw "Improper dimension specified for conversion: canvas_manager: _g";
 		}
-	}
+	};
 
 	window._l = function(number){
 		var e = canvas_environment;
@@ -26,7 +26,7 @@
 		} else {
 			throw "Improper dimension specified for conversion: canvas_manager: _l";
 		}
-	}
+	};
 
 	window._animate = function(callback, framerate) {
 		var handler = {
@@ -35,7 +35,8 @@
 			"framerate":framerate
 		};
 
-		var lastTime = undefined;
+		//Left here for clarity and readability - 
+		var lastTime = undefined; // jshint ignore:line
 		var elapsed = 0;
 		(function checkFrame(){
 			var time = new Date().getTime();
@@ -54,5 +55,5 @@
 		})();
 
 		return handler;
-	}
+	};
 })();

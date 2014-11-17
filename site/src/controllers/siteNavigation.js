@@ -9,7 +9,8 @@ var site = function(app, passport) {
 	app.get('/home', function(req, res) {
 
 		//Grab a random quote.
-		var quotes = new Array();	
+		//this is clearer syntax for this specific instance - 
+		var quotes = new Array(); // jshint ignore:line
 		quotes.push("Quidquid latine dictum, altum videtur");
 		quotes.push("What, were you expecting something witty?");
 		quotes.push("We make art look good.");
@@ -28,7 +29,7 @@ var site = function(app, passport) {
 			username: (req.user)? req.user.local.username : undefined,
 			quote: quotes[Math.floor(Math.random()*quotes.length)],
 			helpers: {
-				backgroundScript: function() { return "assets/scripts/backgrounds/home.js" },
+				backgroundScript: function() { return "assets/scripts/backgrounds/home.js"; },
 			}
 		});
 	});
@@ -53,7 +54,6 @@ var site = function(app, passport) {
 				title:"Latinforimagination",
 				pageCSS:"assets/css/pages/piglet.css",
 				backgroundScript: "assets/scripts/backgrounds/home.js",
-				quote: quotes[Math.floor(Math.random()*quotes.length)],
 			});
 		});
 
@@ -87,7 +87,7 @@ var site = function(app, passport) {
 
 			if(user) { 		
 				req.login(user, function(err) {
-					if(err){ res.send("error"); return; };
+					if(err){ res.send("error"); return; }
 					res.send("success"); return;
 				});
 			} else {
@@ -110,9 +110,9 @@ var site = function(app, passport) {
 			if(user) { 
 				req.logout();
 				req.login(user, function(err) {
-					if(err){ res.send("error"); return; };
+					if(err){ res.send("error"); return; }
 					res.send("success"); return;
-				})
+				});
 				return;
 			} else {
 				if(req.flash('signupMessage') == "username_error") {
@@ -125,15 +125,14 @@ var site = function(app, passport) {
 	});
 
 	app.get('/signup', function(req, res) {
-		console.log('get request recieved')
 		res.render('signup', {
 			title:"Latinforimagination",
 			pageCSS:"assets/css/pages/signup.css",
 			backgroundScript: "assets/scripts/backgrounds/home.js",
 			loggedIn: loggedIn(req, res),
 			username: (req.user)? req.user.local.username : undefined,
-		})
-	})
+		});
+	});
 
 	app.get('/test', function(req, res) {
 		if(req.isAuthenticated()){

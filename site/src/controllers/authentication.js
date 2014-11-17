@@ -1,4 +1,4 @@
-'use-strict'
+(function() { 'use strict'; })();
 
 var LocalStrategy = require('passport-local').Strategy;
 var User = require('../models/user');
@@ -36,7 +36,7 @@ module.exports = function(passport) {
 
     		//Is there arlready a user?
     		if(user) {
-    			console.log('user ' + username + 'already exists')
+    			console.log('user ' + username + 'already exists');
     			return done(null, false, req.flash('signupMessage', 'username_error'));
     		} else {
     			//no user with that email, so create it.
@@ -73,9 +73,9 @@ module.exports = function(passport) {
 			if(err) { return done(err); }
 
 			if(!user || !user.validPassword(password)) {
-				console.log('username or passwrod is wrong.')
+				console.log('username or passwrod is wrong.');
 				return done(null, false/*, req.flash stuff*/);
-			};
+			}
 
 			//all is done, return succsessful user.
 			console.log('successful login');
@@ -83,63 +83,3 @@ module.exports = function(passport) {
 		});
 	}));
 };
-
-
-
-
-/*'use-strict'
-
-//Import----------------------------------
-var passport = require('passport');
-var localStrategy = require('passport-local').Strategy; //We'll use this for local login. 
-var expressSession = require('express-session'); //Used to manage sessions.
-var User = require('models/user.js'); //We have a model of a user.
-//----------------------------------------
-
-var url = process.env.MONGOHQ_URL || "mongodb://localhost/DomoMaker"; //MongoDB url.
-mongoose.connect(url);
-
-app.use(expressSession({secret: 'mySecretKeyGoesHere'}));
-app.use(passport.initialize());
-app.use(passport.session());
-
-
-module.exports = function(passport) {
-
-
-	//Used for persistent login sessions.
-	passport.serializeUser(function(user, done){
-		done(null, user._id);
-	});
-
-	passport.deserializeUser(function(id, done) {
-		User.findById(id, function(err, user) {
-			done(err, user);
-		});
-	});
-
-
-	//Using something called named strategies.  One for login, one for signup.
-	passport.use('local-signup', new LocalStrategy({
-		usernameField : 'email',
-		passwordField: 'password',
-		passReqToCallback: true //Allows us to pass back the entire request to the callback.
-	}, function(req, email, password, done) {
-		//Asynchronous, User.findOne wont fire unless data is sent back
-		process.nextTick(function() {
-			//Find a user where the email is the same as the forms email.
-			//Check to see if the user loging in exist.
-			User.findOne({ 'local.email': email }, function(err, user) {
-				if(err) { return done(err); }
-				if(user) {
-					return done(null, false, req.flash('signupMessage', 'That email is already taken.'));
-				} else {
-					var newUser = new User(); //If not, make the user.
-
-					n
-				}
-			})
-		}
-	}));
-};
-*/

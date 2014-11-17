@@ -4,7 +4,8 @@
   "description": "0.0.0",
   "main": "./site/src/site.js",
   "scripts": {
-    "test": "jshint ./site/src",
+    "pretest": "jshint ./site/src",
+    "test": "echo \"tests complete\"",
     "start": "node ./site/src/site.js"
   },
   "repository": {

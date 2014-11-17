@@ -1,4 +1,6 @@
-'use strict';
+/*jshint node:true*/
+(function() { "use strict"; })();
+
 
 //---------------INCLUDE-----------------------
 var path = require('path'); //path is a built-in node library to handle file system paths

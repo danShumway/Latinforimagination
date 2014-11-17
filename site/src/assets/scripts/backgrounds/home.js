@@ -1,3 +1,5 @@
+(function() { 'use strict'; })();
+
 window.canvas_environment.internal_resolution = {"x":500, "y":100};
 var canvas = document.getElementById("background-canvas");
 var ctx = canvas.getContext('2d');
@@ -14,11 +16,11 @@ var Cloud = function(x, y, speed, radius) {
 			"x":Math.floor(Math.random()*20),
 			"y":Math.floor(Math.random()*10),
 			"radius":Math.floor(Math.random()*radius),
-		})
+		});
 	}
 
 	this.draw = function(){
-		for(p in pieces){
+		for(var p in pieces){
 			piece = pieces[p];
 			ctx.fillStyle = 'rgb(255, 255, 255)';
 			for(var y = this.y - piece.radius; y < this.y + piece.radius; y++){
@@ -38,7 +40,7 @@ var Cloud = function(x, y, speed, radius) {
 
 	this.castShadow = function(ground, distance) {
 		ctx.fillStyle = 'rgb(140, 200, 160)';
-		for(p in pieces){
+		for(var p in pieces){
 			piece = pieces[p];
 			for(var y = this.y - piece.radius*1.2; y < this.y + piece.radius*1.2; y++){
 				var level = Math.min(Math.abs(y - (this.y - piece.radius*1.2)), Math.abs(y - (this.y + piece.radius*1.2)));
@@ -61,19 +63,19 @@ var Ground = function(color, max_elevation){
 	var targetElevation = Math.floor(Math.random()*max_elevation);
 	for (var i = 0; i < 500; i++){
 		var choice = Math.random();
-		if(choice < .5){
+		if(choice < 0.5){
 			if(currentElevation < targetElevation) {
 				currentElevation++;
 			} else {
 				currentElevation--;
 			}
-		} else if (choice < .7) {
+		} else if (choice < 0.7) {
 			if(currentElevation < targetElevation) {
 				currentElevation+=2;
 			} else {
 				currentElevation-=2;
 			}
-		} else if(choice > .97) {
+		} else if(choice > 0.97) {
 			targetElevation = Math.floor(Math.random()*max_elevation);
 		}
 		this.area.push(currentElevation);
@@ -87,7 +89,7 @@ var Ground = function(color, max_elevation){
 
 	this.update = function(){
 
-	}
+	};
 };
 
 var Sky = function(r, g, b) {
@@ -111,7 +113,7 @@ var Sky = function(r, g, b) {
 			ctx.fillStyle='rgb('+ this.breaks[i].r +', '+ this.breaks[i].g+', '+ this.breaks[i].b+')';
 			ctx.fillRect(0, _g(this.breaks[i].y), 500*_1, 100*_1);
 		}
-	}
+	};
 };
 
 //-----------------------------------------------------------------------------------------------
@@ -123,16 +125,16 @@ var init = function() {
 
 	var i;
 	clouds = []; for(i = 0; i < 30; i++){ 
-		clouds.push(new Cloud(Math.floor(Math.random()*500), Math.floor(Math.random()*100), Math.random()*.3, 20));
+		clouds.push(new Cloud(Math.floor(Math.random()*500), Math.floor(Math.random()*100), Math.random()*0.3, 20));
 	}
 	sprites = []; for(i = 0; i < 10; i++){ 
-		sprites.push(new Cloud(Math.floor(Math.random()*500), Math.floor(Math.random()*100), Math.random()*.3+.2, 5));
+		sprites.push(new Cloud(Math.floor(Math.random()*500), Math.floor(Math.random()*100), Math.random()*0.3+0.2, 5));
 	}
 
 
 	//Start
 	window._animate(draw, 25);
-}
+};
 
 //-------------------------------------------------------------------------------------------------
 
@@ -142,14 +144,14 @@ var draw = function() {
 
 	sky.draw();
 
-	for(cloud in clouds){
+	for(var cloud in clouds){
 		clouds[cloud].draw();
 		clouds[cloud].update();
 	}
 
 	ground.draw();
 
-	for(sprite in sprites){
+	for(var sprite in sprites){
 		sprites[sprite].castShadow(ground, -8);
 	}
 
